@@ -1,0 +1,7 @@
+nj_hmda_2017.csv
+venv/
+cs336env/
+*.gguf
+__pycache__/
+.env
+*.csv
