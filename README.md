@@ -10,45 +10,45 @@
 
 #  Project Overview
 
-This project allows a user to ask questions in **natural language**, and the program converts those questions into **SQL queries** that run on a PostgreSQL database.
+This project allows a user to ask questions in **natural language**, and the program converts those questions into **SQL queries** that run on a PostgreSQL database. The system connects a local AI model (LLM) with the Rutgers iLab database using SSH.
 
-The system connects a local AI model (LLM) with the Rutgers iLab database using SSH.
+* The LLM generates a single SELECT query
+* database_llm.py sends the query to iLab using SSH (paramiko)
+* The query runs remotely and results are returned (SQL script and result are printed)
 
 ---
 
-##  How the Program Works
+##  File Structure + Running It
+.
+├── database_creation.sql   # Run on iLab to create + load database
+├── database_llm.py         # Run locally (main script)
+├── schema_llm.sql          # Schema passed to LLM
 
-1. The user types a question (example: "What is the average income?")
-2. The LLM converts the question into a SQL query
-3. The program extracts the SQL query from the LLM output
-4. The SQL query is sent to the iLab server using SSH
-5. The query runs on the database
-6. The results are returned and printed to the user
+
+If you pull this remo, update these in database_llm.py:
+```python
+ILAB_SCRIPT_PATH = "/common/home/egp59/Desktop/336sp26/project2/ilab_script.py"
+ILAB_PYTHON = "/common/home/egp59/cs336env/bin/python"
+```
+Log into ilab and run database_creation.sql. This file combines step_2.sql, step_3.sql, and step_4.sql from Project 2 to intialize the database.
+
+Return to your local environment and run python3 database_llm.py.
+Enter iLab credentials when prompted
+Ask a question! (ex. What is the average income of owner occupied applications?)
 
 ---
 
 ##  LLM Used
-
-We used a local AI model:
 
 - **Model:** Qwen2.5-3B-Instruct  
 - **Library:** llama-cpp-python  
 
 This model meets the requirement of being under 4 billion parameters.
 
----
 
-## Security
 
-We used the `getpass` library to safely enter passwords:
 
-```python
-import getpass
-password = getpass.getpass("ILAB password: ")
 
-##Instructions
-Run:
-\i step_2.sql
-\i step_3.sql
-\i step_4.sql
-to create the Application table.
+
+
+
