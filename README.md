@@ -1,10 +1,10 @@
 # CS 336 Project 3
 
 #  Team Members
-- Esha P  
-- Vishnu M  
-- Nick M  
-- Sahaj p  
+- Esha P: Built the main functionality connecting llm to ssh to database, enabling querying of dataset.
+- Vishnu M: Created readME and checked everything ensuring it worked.
+- Nick M: Build out the extra credit frontend portion of the project.
+- Sahaj P: Did not hear from.  
 
 ---
 
@@ -21,7 +21,9 @@ This project allows a user to ask questions in **natural language**, and the pro
 ##  File Structure + Running It
 
 ├── database_creation.sql   # Run on iLab to create + load database
+
 ├── database_llm.py         # Run locally (main script)
+
 ├── schema_llm.sql          # Schema passed to LLM
 
 
