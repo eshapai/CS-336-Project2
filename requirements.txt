@@ -1,0 +1,5 @@
+
+huggingface_hub==1.8.0
+llama_cpp_python==0.3.21
+pandas==2.3.3
+paramiko==4.0.0

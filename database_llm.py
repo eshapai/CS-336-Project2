@@ -5,7 +5,7 @@ import paramiko
 import os
 from llama_cpp import Llama
 
-SCHEMA_FILE = "schemaForLLMloc.sql"
+SCHEMA_FILE = "schema_llm.sql"
 
 ILAB_HOST = "ilab.cs.rutgers.edu"
 ILAB_SCRIPT_PATH = os.getenv(
