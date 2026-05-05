@@ -47,6 +47,15 @@ Ask a question! (ex. What is the average income of owner occupied applications?)
 
 This model meets the requirement of being under 4 billion parameters.
 
+## Thoughts on Project
+What we found challenging: Initially understanding the workflow and how the pieces all connect took some time. However LLM guidance was very helpful in breaking down key concepts of splitting functionality between our local machine and the database within ilab. 
+
+
+What you found interesting: However, once the pieces came together and we were actually able to query the LLM and question our database in ilab, it was very satisfying seeing how everything connected and how simple it can be to build something like this. I really enjoyed looking through HuggingFace and understanding more about how to integrate models into a project like this, as well.
+
+
+Did you do the extra credit: Yes. We have attached both the code to the front end and also an additional video demoing our working frontend.
+
 
 
 
