@@ -19,7 +19,7 @@ This project allows a user to ask questions in **natural language**, and the pro
 ---
 
 ##  File Structure + Running It
-.
+
 ├── database_creation.sql   # Run on iLab to create + load database
 ├── database_llm.py         # Run locally (main script)
 ├── schema_llm.sql          # Schema passed to LLM
